@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>§k Entity</title>
+                <style>
+                        body {
+                                    background-color: #000;
+                                                color: #0f0; /* Minecraft yeşili/Matrix tarzı (İstersen #b00020 yapıp koyu kırmızı yapabilirsin) */
+                                                            font-family: 'Courier New', Courier, monospace;
+                                                                        display: flex;
+                                                                                    justify-content: center;
+                                                                                                align-items: center;
+                                                                                                            height: 100vh;
+                                                                                                                        margin: 0;
+                                                                                                                                    overflow: hidden;
+                                                                                                                                                font-size: 3rem;
+                                                                                                                                                            font-weight: bold;
+                                                                                                                                                                        text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+                                                                                                                                                                                }
+                                                                                                                                                                                    </style>
+                                                                                                                                                                                    </head>
+                                                                                                                                                                                    <body>
+
+                                                                                                                                                                                        <div id="minecraft-text">§kENTITY</div>
+
+                                                                                                                                                                                            <script>
+                                                                                                                                                                                                    // Sürekli değişecek garip karakterler havuzu
+                                                                                                                                                                                                            const karakterler = "¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿŒœŠšŸž決定國際望";
+                                                                                                                                                                                                                    const textElement = document.getElementById('minecraft-text');
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                    // Buraya kaç karakterli bir yazı görünmesini istiyorsan o kadar uzunluk yazabilirsin
+                                                                                                                                                                                                                                            const yaziUzunlugu = 8; 
+
+                                                                                                                                                                                                                                                    function yaziyiDegistir() {
+                                                                                                                                                                                                                                                                let rastgeleYazi = "";
+                                                                                                                                                                                                                                                                            for (let i = 0; i < yaziUzunlugu; i++) {
+                                                                                                                                                                                                                                                                                            const rastgeleIndeks = Math.floor(Math.random() * karakterler.length);
+                                                                                                                                                                                                                                                                                                            rastgeleYazi += karakterler[rastgeleIndeks];
+                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                    textElement.innerText = rastgeleYazi;
+                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                    // Saniyede kaç kez değişeceğini ayarlar (20 milisaniyede bir = aşırı hızlı ve sürekli değişen)
+                                                                                                                                                                                                                                                                                                                                                            setInterval(yaziyiDegistir, 20);
+                                                                                                                                                                                                                                                                                                                                                                </script>
+                                                                                                                                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                                                                                                                                </html>
+                                                                                                                                                                                                                                                                                                                                                                
